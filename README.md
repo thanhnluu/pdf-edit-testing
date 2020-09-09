@@ -3,7 +3,7 @@
 This is an Angular application used to experiment with PDF-LIB, a library used to create and modify PDF documents.
 
 ## Prerequisites: 
-- `git clone https://github.com/D2P-APPS/pdf-edit-testing.git`
+- `git clone https://github.com/thanhnluu/pdf-edit-testing.git`
 
 - `cd pdf-edit-testing`
 
