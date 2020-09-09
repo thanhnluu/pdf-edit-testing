@@ -1,0 +1,22 @@
+<div>
+    <input type="file"
+           id="file"
+           (change)="handleFileInput($event.target.files)"
+           accept="application/pdf"
+           mat-raised-button>
+           <mat-slide-toggle (change)="flipOCRToggle($event)" [disabled]="!pdfSrc">
+            OCR
+        </mat-slide-toggle>
+        <a [href]="fileUrl | safeUrl" download><button mat-raised-button type="button" *ngIf="pdfSrc">Download</button></a>
+</div>
+<pdf-viewer   #pdfViewer
+              [src]="pdfSrc" 
+              [render-text]="true"
+              [show-all]="true"
+              [stick-to-page]="true"    
+              [show-borders]="true" 
+              (click)="onClick($event)"
+              [page]="page"
+              (after-load-complete)="onLoadComplete()"
+              (text-layer-rendered)="onTextLayerRender()"
+  ></pdf-viewer>

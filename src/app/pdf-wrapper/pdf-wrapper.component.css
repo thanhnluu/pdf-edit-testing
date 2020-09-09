@@ -1,0 +1,8 @@
+pdf-viewer {
+    display: block;
+    height: 100vh;
+}
+
+mat-slide-toggle {
+    padding-right: 30px;
+}

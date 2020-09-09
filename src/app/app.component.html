@@ -1,0 +1,2 @@
+<edit-button [disabled]="editDisabled" (editEmitter)="onEditSwitch($event)"></edit-button>
+<pdf-wrapper (fileLoaded)="onFileLoaded($event)" [canEdit] = "canEdit"></pdf-wrapper>

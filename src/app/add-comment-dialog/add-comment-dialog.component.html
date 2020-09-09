@@ -1,0 +1,19 @@
+<h1 mat-dialog-title>Edit...</h1>
+<div mat-dialog-content>
+    <mat-form-field>
+        <mat-label>Text</mat-label>
+        <input required placeholder="Text to add" matInput [(ngModel)]="data.text">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Font size</mat-label>
+        <input required placeholder="12" matInput [(ngModel)]="data.fontSize">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Color</mat-label>
+        <input required matInput type="color" value="#ff0000" [(ngModel)]="data.color">
+    </mat-form-field>
+</div>
+<div mat-dialog-actions>
+    <button mat-raised-button (click)="onCancel()">Cancel</button>
+    <button mat-raised-button (click)="onSave()" [disabled]="!data.text || !data.fontSize">Save</button>
+</div>
